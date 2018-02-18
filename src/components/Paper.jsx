@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import { QRCode }           from 'react-qr-svg';
-import zclassicjs            from 'zclassicjs';
+import zclassicjs           from 'zclassicjs';
 
 import art1 from '../zen_paper_front.png';
 import art2 from '../zen_paper_back.png';
@@ -33,15 +33,18 @@ class Paper extends Component {
 
     render() {
         return (
-            <Col md={12} id="Paper">
+          <Row id="Paper">
+            <Col xs={12}>
                 <hr />
                 <Row className="r1">
-                    <Col md={2}>
+                    <Col xs={12}>
                         <Button onClick={() => this.genAddress()}>
-                            Generate a new wallet
+                            Generate New Address
                         </Button>
                     </Col>
-                    <Col md={2}>
+                </Row>
+                <Row className="r1">
+                    <Col xs={12}>
                         <Button onClick={window.print}>
                             Print
                         </Button>
@@ -50,7 +53,7 @@ class Paper extends Component {
                 <hr />
                 {this.state.addr ? (
                     <Row className="r2">
-                        <Col md={12} className="max-width">
+                        <Col xs={12} className="max-width">
 
                             <h2>Overview</h2>
 
@@ -109,17 +112,18 @@ class Paper extends Component {
                 <Row className="r3">
                     <Col>
                         <p>
-                          A paper wallet is a piece of paper containing a public address and a private key. It allows you to store some ZCLs offline.
+                          <b>A Paper Wallet</b> is a piece of paper containing a public address and a private key. It allows you to store some Zclassics (ZCLs) offline.
                         </p>
                         <p>
-                          These kind of wallets are vulnerable to loss and theft. You should keep it safe like jewels or cash. Therefore it is recommended either to have a backup or to generate it only for a temporary use.
+                          These kind of wallets are vulnerable to loss and theft. You should keep it safe like jewels or cash. Therefore it is recommended either to have a backup or to generate it only for temporary use.
                         </p>
                         <p>
-                          <b>Image Quality:</b> print this wallet with Chrome for a better quality.
+                          <b>When Printing:</b> Print this wallet with Chrome for better image quality.
                         </p>
                     </Col>
                 </Row>
             </Col>
+          </Row>
         );
     }
 }

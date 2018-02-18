@@ -29,9 +29,9 @@ export default class MainPanel extends Component {
     getCategories() {
         return [
             { id: 0,    title: "Single Address",        content: Single },
-            { id: 1,    title: "Paper",                 content: Paper },
+            { id: 1,    title: "Paper Wallet",          content: Paper },
             { id: 2,    title: "Brain Wallet",          content: Brain },
-            { id: 3,    title: "Multisig Wallet",       content: Multisig },
+            { id: 3,    title: "Multi-Sig Wallet",      content: Multisig },
             { id: 4,    title: "Bulk Wallet",           content: Bulk },
             { id: 5,    title: "Wallet Details",        content: Details }
         ];
@@ -64,10 +64,10 @@ export default class MainPanel extends Component {
 
     renderMainPanel() {
         return (
-            <Tabs id="nav" bsStyle="pills" justified
+            <Tabs id="nav" bsStyle="pills"
                 activeKey={this.state.activeNavTab}
                 onSelect={(key) => this.setState({activeNavTab: key})}
-                className = "zenTabsWrap"
+                className="zenTabsWrap"
             >
                 {this.getCategories().map((category) => (
                     <Tab key={category.id}
@@ -88,7 +88,7 @@ export default class MainPanel extends Component {
             <div id="body">
                 <Grid>
                     <Row>
-                        <Col sm={12}>
+                        <Col xs={12}>
                             {this.renderMainPanel()}
                         </Col>
                     </Row>

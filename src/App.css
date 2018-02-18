@@ -17,7 +17,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #4C4C4C;
-    overflow-x: hidden;
 }
 a{
     color: #1B2F59;
@@ -36,8 +35,8 @@ a:hover{
     display: -ms-flexbox;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
 }
 #header {
     font-weight: bold;
@@ -71,19 +70,25 @@ a:hover{
 }
 
 .zenHeader .container-fluid{
-    padding: 0px 30px;
+   padding: 0px 63px;
    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .zenHeader{
     margin-bottom: 0px;
+    width: 100%;
 }
-.zenHeader  .navbar-text{
+.zenHeader .navbar-text{
     margin-left: 0px;
     margin-right: 0px;
     font-size: 13px;
 }
  .headerLeftOption > a{
      color: red;
+}
+/*<Navbar.Text>|</Navbar.Text>*/
+
+.zenHeader .nav li {
+  display: inline-block !important;
 }
 .zenHeader .nav li a{
     font-weight: 400;
@@ -118,8 +123,12 @@ a:hover{
     top: 0;
     width: 9999px;
 }
+.navbar-nav {
+  margin-bottom: 0px;
+}
 .zenHeader .nav{
     padding: 6px 0px;
+    padding-bottom: 0px;
 }
 /*________________tab section css___________*/
 
@@ -127,10 +136,15 @@ a:hover{
     text-align: center;
     padding: 70px 0px;
 }
-.zenTabsWrap .nav-justified{
+.zenTabsWrap > ul > li{
     display: inline-block;
-    width: auto;
     padding-bottom: 10px;
+
+    width: 15.96%;
+    margin: 0.6%;
+}
+.zenTabsWrap > ul > li > a:hover {
+  color: #813100;
 }
 .zenTabs {
     text-align: left;
@@ -144,33 +158,36 @@ a:hover{
     margin: 0px;
     margin-bottom: 10px;
 }
-.zenTabsWrap .nav-justified > li{
-    width: auto;
-}
-.zenTabsWrap .nav-justified > li a{
+
+.zenTabsWrap > ul > li a{
     border-radius: 0;
     font-size: 16px;
-    padding: 12px 0;
+    /*padding: 12px 0;*/
     text-align: center;
     text-transform: capitalize;
-    width: 158px;
+    /*width: 118px;*/
     outline: none;
     background-color: #813100;
     color: #fff;
     font-weight: 500;
 }
 .zenTabsWrap .nav-justified > li + li a{
-    margin-left: 3px;
+    margin-left: 0px;
 }
+
 .zenTabsWrap .nav-pills > li.active > a,
- .zenTabsWrap .nav-pills > li.active > a:focus,
-.zenTabsWrap  .nav-pills > li.active > a:hover {
+.zenTabsWrap .nav-pills > li.active > a:focus,
+.zenTabsWrap .nav-pills > li.active > a:hover {
     background-color: #FFFFFF;
     color: #813100;
 }
 
-.zenTabs > div {
-    padding-top: 20px;
+.zenTabsWrap .nav-pills>li+li {
+    margin-left: 0px !important;
+}
+
+.nav-pills>li {
+  float: none !important;
 }
 
 .zenTabs {
@@ -255,7 +272,7 @@ hr{
 
 #footer{
     background-color: #813100;
-    padding: 30px 0px;
+    padding: 63px 0px;
 }
 #footer .footerSocialWrap{
     text-align: center;
@@ -392,6 +409,10 @@ hr{
     }
     #header, #footer, .nav, hr, .r1, .r3, h2{
         display: none!important;
+    }
+
+    .singleTabs {
+      margin: 10px !important;
     }
 
     #layout {

@@ -13,8 +13,9 @@ export default class Footer extends Component {
         return (
             <Grid fluid={true} id="footer">
                 <br />
+                <div className="container">
                 <Row>
-                    <Col md={12} className="footerSocialWrap">
+                    <Col xs={12} className="footerSocialWrap">
                         <ul className="footerSocial">
                             <li>
                                 <a href="http://zclassic.org/">
@@ -48,15 +49,19 @@ export default class Footer extends Component {
                             </li>
                         </ul>
                     </Col>
-                    <Col md={12}>
-                        <p className="footerCopyright">
-                            JavaScript Client-Side ZCLASSIC Wallet Generator
-                        </p>
-                        <p className="footerCopyright">
-                            Send me a memo zcH8yxWM5HHkrLKrt9HeTxWYPUqv1kzLYtX44BmkFSvWaixmfibB4U64P81RpDUUtGYuWRW1TPDb4uiB9nPtMfBrBcPv4w7
-                        </p>
+                    <Col xs={12}>
+
                     </Col>
                 </Row>
+                </div>
+                <div>
+                <p className="footerCopyright">
+                    <a href="https://github.com/johandjoz/zclassicpaperwallet.com" target="_blank" rel="noopener noreferrer">JavaScript Client-Side ZCLASSIC Wallet Generator</a>
+                </p>
+                <p className="footerCopyright">
+                    Send me a memo @ zcH8yxWM5HHkrLKrt9HeTxWYPUqv1kzLYtX44BmkFSvWaixmfibB4U64P81RpDUUtGYuWRW1TPDb4uiB9nPtMfBrBcPv4w7
+                </p>
+                </div>
             </Grid>
         );
     }

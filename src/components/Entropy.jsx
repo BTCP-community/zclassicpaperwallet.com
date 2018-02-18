@@ -125,7 +125,7 @@ class Entropy extends Component {
 
     render() {
         return (
-          <Col md={12} id="Entropy">
+          <Col xs={12} id="Entropy">
               <Row className="r3">
                   <Col>
                       <ProgressBar
@@ -133,18 +133,15 @@ class Entropy extends Component {
                         label={`${this.getSeedingProgress()}%`} />
                       <div id="seedMouseBox"
                           onMouseMove={e => this.seed(e)}
-                      ><p>Move your mouse randomly in this area</p></div>
+                      ><p>Move your mouse around to generate randomness</p></div>
                       <p>
                         <FormGroup controlId="formControlsTextarea">
-                            <ControlLabel>Type random keys from your keyboard here :</ControlLabel>
+                            <ControlLabel>... or type random letters and numbers here:</ControlLabel>
                             <FormControl
                                 type="text"
                                 onKeyPress={e => this.seedKeyPress(e)}
                             />
                         </FormGroup>
-                      </p>
-                      <p>
-                          You can choose how many people has a key, and how many keys are needed to manage the funds.
                       </p>
                   </Col>
               </Row>

@@ -33,7 +33,7 @@ class Details extends Component {
             if(!this.state.input) throw(this.state.input);
 
             if(this.state.input[0] === '5'
-            || this.state.input[0] === 'J'
+            || this.state.input[0] === 'L'
             || this.state.input[0] === 'K') {
                 privWIF = this.state.input;
                 priv    = zclassicjs.address.WIFToPrivKey(privWIF);
@@ -96,7 +96,7 @@ class Details extends Component {
 
     getZpriv() {
         if (this.state.type === 'Z')
-            return("private key: " + this.state.priv);
+            return("Private Key: " + this.state.priv);
     }
 
     render() {
@@ -119,7 +119,7 @@ class Details extends Component {
                             </Radio>
                         </FormGroup>
                     </Col>
-                    <Col md={3}>
+                    <Col xs={3}>
                         <FormGroup controlId="privateKey"
                             bsSize="sm"
                         >
@@ -129,7 +129,7 @@ class Details extends Component {
                             />
                         </FormGroup>
                     </Col>
-                    <Col md={2}>
+                    <Col xs={2}>
                         <Button onClick={this.state.type === 'T' ?
                             () => this.genTAddress()
                             : () => this.genZAddress()}
@@ -137,7 +137,7 @@ class Details extends Component {
                             View Details
                         </Button>
                     </Col>
-                    <Col md={2}>
+                    <Col xs={2}>
                         <Button onClick={window.print}>
                             Print
                         </Button>
@@ -146,9 +146,9 @@ class Details extends Component {
                 <hr />
                 {this.state.addr ? (
                     <Row className="r2">
-                        <Col md={6} className="max-width">
+                        <Col xs={6} className="max-width">
                             <h1 style={{color:'green'}}>Public</h1>
-                            <h3>Zen Address</h3>
+                            <h3>ZCL Address</h3>
                             <div>
                                 <QRCode
                                     bgColor="#FFFFFF"
@@ -162,7 +162,7 @@ class Details extends Component {
                                 {this.state.addr}
                             </div>
                         </Col>
-                        <Col md={6} className="max-width">
+                        <Col xs={6} className="max-width">
                             <h1 style={{color:'red'}}>Secret</h1>
                             <div>
                                 {this.state.type === 'T' ? (
@@ -191,13 +191,13 @@ class Details extends Component {
                 <Row className="r3">
                     <Col>
                         <p>
-                            Entering your private key here allows you to regenerate your Zclassic Address and print your wallet if you wish.
+                            Entering your private key here allows you to view your Zclassic address and print your wallet if you wish.
                         </p>
                         <p>
                             <b>Warning: make sure you are on ZCLASSICPAPERWALLET.COM !</b>
                         </p>
                         <p>
-                            Your private key is a sensitive element. Whomever knows it can manage your funds. If you enter your private key into some website double-check the URL to avoid phishing attempts.
+                            Your private key is a sensitive element. Whomever knows it can manage your funds. If you enter your private key into some website, double-check the URL to avoid phishing attempts.
                         </p>
                     </Col>
                 </Row>

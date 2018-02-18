@@ -101,7 +101,7 @@ class Multisig extends Component {
                     <Row className="r2">
                         <Col md={4} className="max-width">
                             <h1 style={{color:'green'}}>Public</h1>
-                            <h3>Zen Address</h3>
+                            <h3>ZCL Address</h3>
                             <div>
                                 <QRCode
                                     bgColor="#FFFFFF"
@@ -144,10 +144,10 @@ class Multisig extends Component {
                 <Row className="r3">
                     <Col>
                         <p>
-                            <b>A Multi Signature wallet</b> is useful if the funds belong to more than one person. It's like a joint account.
+                          <b>A Multi-Signature Wallet</b> is useful if the funds belong to more than one person. It's like a joint account.
                         </p>
                         <p>
-                            You can choose how many people has a key, and how many keys are needed to manage the funds.
+                          You can choose how many people receive a key, and how many keys are required to send the funds.
                         </p>
                     </Col>
                 </Row>
