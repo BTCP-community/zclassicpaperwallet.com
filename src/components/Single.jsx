@@ -165,7 +165,7 @@ class Single extends Component {
                         </ul>
                         <br/>
                         <p>
-                            <b>To spend your ZCL,</b> you can download the <a href='https://github.com/ZclassicOfficial/Zclassic-swing-wallet-ui/releases' target="_blank" rel="noopener noreferrer">Zclassic Swing Wallet</a> and import your private key to the p2p client wallet. It is <b>**strongly discouraged**</b> to spend directly from this address without importing the private key into a wallet application, since certain precautions need to be taken so you receive your change!
+                            <b>To spend your ZCL,</b> you can download the <a href='https://github.com/z-classic/zclassic-swing-wallet/releases' target="_blank" rel="noopener noreferrer">Zclassic Swing Wallet</a> and import your private key to the p2p client wallet. It is <b>**strongly discouraged**</b> to spend directly from this address without importing the private key into a wallet application, since certain precautions need to be taken so you receive your change!
                           </p>
                         </div>
                     </Col>
